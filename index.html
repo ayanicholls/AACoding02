@@ -5,6 +5,14 @@
 <meta charset="UTF-8">
 <meta name="apple-mobile-web-app-title" content="CodePen">
 <title>CodePen - AACoding02-2</title>
+<style>
+.correct{
+  background:green;
+}
+.incorrect{
+  background:red;
+}
+</style>
 </head>
 <body translate="no">
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
@@ -12,5 +20,30 @@
 <div>
 \( \sqrt[3]{8} = 8^{\frac{1}{3}} = 2 \)
 </div>
+<h1>Aya's Bomb Ass Math Questions</h1>
+<ol>
+<li>\( \sqrt[3]{8} + \sqrt[3]{27} \)</li>
+<input data-correct="5">
+</ol>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+$("input").change(onChange);
+function onChange(evt) {
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  console.log(correct, response);
+
+  if (correct == response) {
+    $(this)
+      .removeClass("incorrect")
+      .addClass("correct");
+  } else{
+    if (correct == response) {
+    $(this)
+      .addClass("incorrect")
+      .removeClass("correct");
+  }
+}
+    </script>
 </body>
 </html>
